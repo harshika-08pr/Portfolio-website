@@ -1,0 +1,258 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout helpers */
+.section {
+    padding: 40px 10%;
+    background-color: #f5f5f5;
+}
+
+.section:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #4a90e2;
+    padding-left: 10px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 0.95rem;
+}
+
+nav a {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #333;
+}
+
+nav a:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* Profile */
+.profile {
+    padding: 50px 10%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6f0ff;
+}
+
+.profile-text h1 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.profile-text h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a90e2;
+}
+
+/* Buttons */
+.primary,
+.secondary {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid #4a90e2;
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.primary:hover,
+.secondary:hover {
+    background-color: #326bb3;
+}
+
+/* Skills */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 12px;
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    height: 6px;
+    background-color: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #4a90e2;
+}
+
+/* Simple width levels */
+.level-80 { width: 80%; }
+.level-55 { width: 55%; }
+.level-75 { width: 75%; }
+.level-50 { width: 50%; }
+.level-10 { width: 10%; }
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+
+.project-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.secondary {
+    background-color: #ffffff;
+    color: #4a90e2;
+}
+
+/* Contact */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1 1 200px;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: #4a90e2;
+}
+
+.contact-form {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form label {
+    font-size: 0.85rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px 10%;
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
